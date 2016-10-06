@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<script src="clientDitection.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+	  var deviceInfo=window.device;
+	  var tableHeding="<tr><th colspan='2'>Device Information</th></tr>";
+	  var tableRow;
+	  for(var item in deviceInfo) {
+	     tableRow+="<tr><td>"+item+"</td><td>"+deviceInfo[item]+"</td></tr>"
+	  }
+	  var table="<table>"+tableHeding + tableRow +"</table>";
+	  document.body.innerHTML +=table;
+</script>
+</body>
+</html>
