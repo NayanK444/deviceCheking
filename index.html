@@ -5,12 +5,16 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+}
+th {
+    text-align: center;
+    background: gray;
 }
 tr:nth-child(even) {
     background-color: #dddddd;
@@ -22,7 +26,7 @@ tr:nth-child(even) {
 <script type="text/javascript">
 	  var deviceInfo=window.device;
 	  var tableHeding="<tr><th colspan='2'>Device Information</th></tr>";
-	  var tableRow;
+	  var tableRow='';
 	  for(var item in deviceInfo) {
 	     tableRow+="<tr><td>"+item+"</td><td>"+deviceInfo[item]+"</td></tr>"
 	  }
